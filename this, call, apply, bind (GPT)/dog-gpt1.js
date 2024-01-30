@@ -28,7 +28,7 @@ const Dog = {
   train: function(command) {
     if (typeof this[command] === 'function') {
       // Используем метод call для выполнения функции обратного вызова с контекстом this объекта Dog
-      this[command].call(this);
+      this[command].call();
     } else {
       console.log(this.name + " не знает такой команды.");
     }
