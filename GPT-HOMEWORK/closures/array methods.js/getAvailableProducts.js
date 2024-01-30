@@ -14,12 +14,13 @@ let products = [
   ];
 
 function getAvailableProducts (threshold) {
-    return productArr => productArr.filter(productArr.quantity >= threshold)
+    return productArr => productArr.filter(product => product.quantity >= threshold)
 }
 
 let getAvailableProductsAboveThreshold = getAvailableProducts(7);
 
   console.log(getAvailableProductsAboveThreshold(products));
+
   // Ожидаемый вывод: [{ name: "Футболка", price: 20, quantity: 10 }, { name: "Кроссовки", price: 80, quantity: 8 }]
 
 
